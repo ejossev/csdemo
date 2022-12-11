@@ -13,7 +13,7 @@ export default function Login({ allProducts }) {
     console.log("inside redirect " + account.username)
     if (account.username && account.username !== "")
       router.push("/")
-  }, [account])
+  }, [account, router])
 
   useEffect(redirectIfLogged)
 

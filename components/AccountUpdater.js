@@ -20,11 +20,11 @@ const AccountUpdater = (props) => {
     }
 
     setAccount(user)
-  })
+  }, [setAccount])
 
   useEffect(() => {
     checkAccount()
-  }, [])
+  }, [checkAccount])
 
   const contextValue = useMemo(() => ({account, checkAccount}), [account, checkAccount])
 

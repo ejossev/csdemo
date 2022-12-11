@@ -1,8 +1,9 @@
-import { withIronSessionApiRoute } from "iron-session/next";
-import { ironOptions } from "../../lib/config";
+import { withIronSessionApiRoute } from "iron-session/next"
+import { ironOptions } from "../../lib/config"
+
 const { PrismaClient } = require('@prisma/client')
 
-export default withIronSessionApiRoute(userRoute, ironOptions);
+export default withIronSessionApiRoute(userRoute, ironOptions)
 
 const prisma = new PrismaClient()
 
@@ -22,8 +23,7 @@ async function userRoute(req, res) {
   } else {
     res.json({
       isLoggedIn: false,
-      isAdmin: false,
-      login: "",
+      username: ""
     })
   }
 }

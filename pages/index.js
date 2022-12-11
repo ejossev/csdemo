@@ -1,6 +1,7 @@
 import allProducts from "../data/products.json";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ allProducts }) {
@@ -20,7 +21,7 @@ export default function Home({ allProducts }) {
                 <Link href={`products/${product.slug}`}>
                   <a>
                     <div className={styles.product_img}>
-                      <img src={product.image.url} alt={product.name} />
+                      <Image src={product.image.url} alt={product.name} />
                     </div>
                   </a>
                 </Link>
